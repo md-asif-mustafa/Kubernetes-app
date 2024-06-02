@@ -33,7 +33,7 @@ spec:
                name: app-secret
                key: db-pass
       nodeSelector:
-        zone: us-east-1a
+        zone: us-east-1b
       volumes:
         - name: vpro-db-data
           # This AWS EBS volume must already exist.
