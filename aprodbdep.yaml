@@ -30,7 +30,7 @@ spec:
               mountPath: /var/lib/mysql
       containers:
       - name: vprodb
-        image: vprofile/vprofiledb:V1
+        image: vprofile/vprofiledb
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: vpro-db-data
