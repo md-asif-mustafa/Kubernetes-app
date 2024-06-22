@@ -15,7 +15,7 @@ spec:
         app: vprodb
     spec:
       nodeSelector:
-        zone: us-east-1a
+        zone: us-west-2a
       volumes:
         - name: vpro-db-data
           awsElasticBlockStore:
