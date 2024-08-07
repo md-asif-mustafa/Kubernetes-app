@@ -1,27 +1,27 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: aprodb
+  name: vprodb
   labels:
-    app: aprodb
+    app: vprodb
 spec:
   selector:
     matchLabels:
-      app: aprodb
+      app: vprodb
   replicas: 1
   template:
     metadata:
       labels:
-        app: aprodb
+        app: vprodb
     spec:
       containers:
-      - name: aprodb
+      - name: vprodb
         image: mdasif74/aprofiledb
         volumeMounts:
         - mountPath: /var/lib/mysql
-          name: apro-db-data
+          name: vpro-db-data
         ports:
-        - name: aprodb-port
+        - name: vprodb-port
           containerPort: 3306
         env:
         - name: MYSQL_ROOT_PASSWORD
@@ -32,7 +32,7 @@ spec:
       nodeSelector:
         zone: us-east-1a
       volumes:
-      - name: apro-db-data
+      - name: vpro-db-data
         awsElasticBlockStore:
           volumeID: vol-0c6825226f349a8d7
           fsType: ext4
