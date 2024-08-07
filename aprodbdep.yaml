@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: aprodb
-        image: vprofile/vprofiledb
+        image: mdasif74/aprofiledb
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: apro-db-data
@@ -34,7 +34,7 @@ spec:
       volumes:
       - name: apro-db-data
         awsElasticBlockStore:
-          volumeID: vol-0763923a86d0c27ba
+          volumeID: vol-0c6825226f349a8d7
           fsType: ext4
       initContainers:
       - name: busybox
