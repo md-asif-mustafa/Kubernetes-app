@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: aprodb
-        image: mdasif74/aprofiledb
+        image: vprofile/vprofiledb
         volumeMounts:
         - mountPath: /var/lib/mysql
           name: apro-db-data
