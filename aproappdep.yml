@@ -1,24 +1,24 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: vproapp
+  name: aproapp
   labels: 
-    app: vproapp
+    app: aproapp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: vproapp
+      app: aproapp
   template:
     metadata:
       labels:
-        app: vproapp
+        app: aproapp
     spec:
       containers:
-      - name: vproapp
-        image: vprofile/vprofileapp
+      - name: aproapp
+        image: mdasif74/aprofileapp
         ports:
-        - name: vproapp-port
+        - name: aproapp-port
           containerPort: 8080
       initContainers:
       - name: init-mydb
