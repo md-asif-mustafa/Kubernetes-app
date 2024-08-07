@@ -34,7 +34,7 @@ spec:
       volumes:
       - name: apro-db-data
         awsElasticBlockStore:
-          volumeID: vol-0f7c898b9d00b993d
+          volumeID: vol-0763923a86d0c27ba
           fsType: ext4
       initContainers:
       - name: busybox
