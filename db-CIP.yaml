@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: aprodb
+  name: vprodb
 spec:
   ports:
   - port: 3306
-    targetPort: aprodb-port
+    targetPort: vprodb-port
     protocol: TCP
   selector:
-    app: aprodb
+    app: vprodb
   type: ClusterIP
